@@ -44,54 +44,80 @@ button {
 }
 
 .tile {
-    background-color: #444;
     color: #fff;
     padding: 20px;
-    font-size: 150%;
+    font-size: 250%;
     border: 1px solid #ccc;
 }
 
-.tile1 {
+.tile span {
+    display: none;
+}
+
+.tile1,
+.tile1 span {
     background-color: #000;
 }
 
-.tile2 {
+.tile2,
+.tile2 span {
     background-color: #333333;
 }
 
-.tile3 {
+.tile3,
+.tile3 span {
     background-color: #FFFFFF;
     color: #000;
 }
 
-.tile4 {
+.tile4,
+.tile4 span {
     background-color: #EFEFEF;
     color: #000;
 }
 
-.tile5 {
+.tile5,
+tile5 span {
     background-color: #72C3DC;
 }
 
-.tile6 {
+.tile6,
+.tile6 span {
     background-color: #2B8EAD;
 }
 
-.tile7 {
+.tile7,
+.tile7 span {
     background-color: #6F98A8;
 }
 
-.tile8 {
+.tile8,
+.tile8 span {
     background-color: #BFBFBF;
 }
 
-.tile9 {
+.tile9,
+.tile9 span {
     background-color: #2F454E;
 }
 
 @media only screen and (max-width: 768px) {
     .container {
         grid-template-columns: 100%;
+    }
+
+    .tile {
+        font-size: 100%;
+        padding: 0;
+    }
+
+    .tile span {
+        display: grid;
+    }
+
+    label {
+        display: grid;
+        grid-template-columns: 10% 90%;
     }
 
     .wrapper {
@@ -101,5 +127,23 @@ button {
     .container div:nth-child(1),
     .container div:nth-child(2) {
         grid-column-start: unset;
+    }
+
+    .tile1,
+    .tile2,
+    .tile3,
+    .tile4,
+    .tile5,
+    .tile6,
+    .tile7,
+    .tile8,
+    .tile9 {
+        background-color: #EFEFEF;
+        color: #000;
+    }
+
+    span {
+        border: 1px solid #ccc;
+
     }
 }

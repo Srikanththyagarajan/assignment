@@ -50,7 +50,7 @@ class grid {
   }
   render(data) {
     let box = this.data
-      .map((el) => `<label class="tile tile${el}">${el}</label>`)
+      .map((el) => `<label class="tile tile${el}"><span></span>${el}</label>`)
       .join("");
     wrapper.insertAdjacentHTML("afterbegin", box);
   }
